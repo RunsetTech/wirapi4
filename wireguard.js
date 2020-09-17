@@ -43,8 +43,8 @@ async function initialize() {
 var checkingIp = false;
 // add a peer in WireGuard CLI and updates the database
 async function addPeer(data) {
-    if(checkingIp === false) {
-        checkingIp = true;
+   
+    //    checkingIp = true;
         
     // function to generate a valid peer IP in sequence in the database
     async function getAllowedIP() {
@@ -184,10 +184,6 @@ async function addPeer(data) {
     checkingIp = false;
     // return the peer object
     return peer
-} else {
-    
-    throw new GraphQLError('conncurrent')
-}
 
 }
 
